@@ -1,0 +1,362 @@
+---
+layout: default
+---
+
+
+
+{% include section-header.html title="html" %}
+
+
+
+<section class="section" id="h-elements">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Elements</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Add closing tags to elements that aren't self-closing. <sup>1</sup></li>
+      <li class="main__list-item">Don't add the forward slash for self-closing elements. <sup>2</sup></li>
+      <li class="main__list-item">Avoid unnecessary markup, such as surrounding a block element in
+        a <code>&lt;div&gt;</code>. <sup>3</sup></li>
+      <li>Use lowercase, not uppercase.</li>
+    </ul>
+  </main>
+  <aside class="aside">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight html %}{% include code/elements.html %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/html/elements.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="h-attributes">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Attributes</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Surround values for attributes in double quotes.</li>
+      <li class="main__list-item">Boolean attributes, such as <code>required</code>, do not
+        need a value. <sup>1</sup></li>
+      <li class="main__list-item">Follow this order for attributes: <sup>2</sup>
+        <ol class="main__sublist">
+          <li><code>class</code></li>
+          <li><code>id</code></li>
+          <li><code>name</code></li>
+          <li><code>data- attributes</code></li>
+          <li><code>for, href, value, etc.</code></li>
+        </ol>
+      </li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight html %}{% include code/attributes.html %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/html/attributes.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="h-courtesies">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Courtesies</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Put three line breaks between blocks/components.</li>
+      <li class="main__list-item">Avoid adding comments. An exception would be a closing comment
+        for large blocks. <sup>1</sup></li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight html %}{% include code/courtesies.html %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/html/courtesies.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="h-reminders">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Reminders</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Don't use styling tags such as <code>&lt;bold&gt;</code> and
+        <code>&lt;hr&gt;</code>.</li>
+      <li class="main__list-item">Do not inline Javascript.</li>
+      <li class="main__list-item">HTML is about structure and meaning, not style or behavior.</li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    <ul class="aside__nav">
+      <li class="aside__nav-item aside__nav-item--selected">Reasoning</li>
+    </ul>
+      {% include reasoning/html/reminders.html %}
+  </aside>
+</section>
+
+
+
+{% include section-header.html title="css" %}
+
+
+
+<section class="section" id="c-formatting">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Formatting</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Each selector in a group should be on its own line.</li>
+      <li class="main__list-item">The opening brace belongs on the same line as the selector.</li>
+      <li class="main__list-item">Put a space before the opening brace.</li>
+      <li class="main__list-item">Each property and value pair gets its own line</li>
+      <li class="main__list-item">Properties and values belong on the same line.</li>
+      <li class="main__list-item">One space after the colon of a property.</li>
+      <li class="main__list-item">Put a space after each comma.</li>
+      <li class="main__list-item">Always end with a semicolon.</li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight css %}{% include code/formatting.css %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/css/formatting.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="c-sass">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">SASS</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Stick to the basics: variables, includes, and mixins. <sup>1</sup></li>
+      <li class="main__list-item">Avoid nesting whenever possible. <sup>2</sup></li>
+      <li class="main__list-item">Adhere to this order: <sup>3</sup>
+        <ol class="main__sublist">
+          <li class="main__sublist-item"><code>@include</code></li>
+          <li class="main__sublist-item">regular styles</li>
+          <li class="main__sublist-item">psuedo classes</li>
+          <li class="main__sublist-item">nested items (only if you must)</li>
+          <li class="main__sublist-item">media queries</li>
+        </ol>
+      </li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight scss %}{% include code/sass.scss %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/css/sass.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="c-css">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">CSS</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Hyphen-delimit your class names.</li>
+      <li class="main__list-item">Use lowercase, not uppercase.</li>
+      <li class="main__list-item">Prefix decimals with a leading 0.</li>
+      <li class="main__list-item">Don't specify units for zero values.</li>
+      <li class="main__list-item">Do not style <code>js-</code> prefixed classes. <sup>1</sup></li>
+      <li class="main__list-item">Avoid using <code>!important</code> unless absolutely
+        necessary. Restrict its use to utility classes prefixed with a
+        <code>u-</code>. <sup>2</sup></li>
+      <li class="main__list-item">Adhere to this property order:
+        <ol class="main__sublist">
+          <li class="main__sublist-item">Positioning (<code>position</code>,
+            <code>z-index</code>...)</li>
+          <li class="main__sublist-item">Box Model (<code>display</code>, <code>margin</code>...)</li>
+          <li class="main__sublist-item">Typographic (<code>font</code>, <code>color</code>...)</li>
+          <li class="main__sublist-item">Visual (<code>border</code>, <code>opacity</code>...)</li>
+        </ol>
+      </li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight css %}{% include code/css.css %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/css/css.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="c-naming-conventions">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Naming Convention</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Find one you like and stick to it.</li>
+      <li class="main__list-item">This site was made using <a href="http://getbem.com/">BEM</a>.
+        Other options include:
+        <ol class="main__sublist">
+          <li class="main__sublist-item"><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a></li>
+          <li class="main__sublist-item"><a href="https://smacss.com/">SMACSS</a></li>
+          <li class="main__sublist-item"><a href="https://github.com/necolas/idiomatic-css">Idiomatic CSS</a></li>
+          <li class="main__sublist-item"><a href="https://github.com/rstacruz/rscss">RSCSS</a></li>
+          <li class="main__sublist-item"><a href="http://www.sitepoint.com/title-css-simple-approach-css-class-naming/">Title CSS</a></li>
+        </ol>
+      </li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight scss %}{% include code/naming-conventions.scss %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/css/naming-conventions.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="c-commenting">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Commenting</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Use a title comment for sections/components. <sup>1</sup></li>
+      <li class="main__list-item">Keep comments coupled with the component/element. Don't put
+        comments next to individual properties. <sup>2</sup></li>
+      <li class="main__list-item">Don't comment about what you're doing. It's more important to
+        comment why you're doing it. <sup>3</sup></li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight scss %}{% include code/commenting.scss %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/css/commenting.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+<section class="section" id="c-courtesies">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Courtesies</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Prefer <code>rem</code> over <code>px</code> values.</li>
+      <li class="main__list-item">Prefer seconds over milliseconds.</li>
+      <li class="main__list-item">Be thoughtful of your shorthand notation. <sup>1</sup></li>
+      <li class="main__list-item">Insert one newline between elements and 3 newlines between
+        blocks/components.</li>
+      <li>Indent elements that belong together.</li>
+    </ul>
+  </main>
+  <aside class="aside code-selected">
+    {% include info-nav.html %}
+    <div class="aside__info aside__info--selected">
+      {% highlight css %}{% include code/courtesies.css %}{% endhighlight %}
+    </div>
+    <div class="aside__info">
+      {% include reasoning/css/courtesies.html %}
+    </div>
+  </aside>
+</section>
+
+
+
+{% include section-header.html title="tools" %}
+
+
+
+<section class="section" id="t-editor-settings">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Editor Settings</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">Use UTF-8 encoding.</li>
+      <li class="main__list-item">Use soft tabs set to 4 spaces.</li>
+      <li class="main__list-item">Give yourself an 80 character wide guide</li>
+      <li class="main__list-item">Remove any trailing whitespace.</li>
+      <li class="main__list-item">Put a new line at the end of files.</li>
+    </ul>
+  </main>
+  <aside class="aside">
+    <ul class="aside__nav">
+      <li class="aside__nav-item aside__nav-item--selected">Info</li>
+    </ul>
+      {% include reasoning/tools/editor-settings.html %}
+  </aside>
+</section>
+
+
+
+<section class="section" id="t-plugins">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Plugins</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item">EditorConfig - helps maintain our coding style. Use this config
+        file.
+        <ul class="main__sublist">
+          <li class="main__sublist-item"><a href="https://github.com/sindresorhus/atom-editorconfig">Atom</a></li>
+          <li class="main__sublist-item"><a href="https://github.com/sindresorhus/editorconfig-sublime">Sublime</a></li>
+        </ul>
+      </li>
+      <li class="main__list-item">Emmet - greatly improves the code writing workflow with shorthand,
+        autocomplete, and more.
+        <ul class="main__sublist">
+          <li class="main__sublist-item"><a href="https://github.com/emmetio/emmet-atom">Atom</a></li>
+          <li class="main__sublist-item"><a href="https://packagecontrol.io/packages/Emmet">Sublime</a></li>
+        </ul>
+      </li>
+      <li class="main__list-item">Minimap - a full preview of your code in the sidebar.
+        <ul class="main__sublist">
+          <li class="main__sublist-item"><a href="https://atom.io/packages/minimap">Atom</a></li>
+          <li class="main__sublist-item"><a href="https://kirmir.wordpress.com/2013/07/11/sublime-text-3-minimap-viewport/">Sublime</a></li>
+        </ul>
+      </li>
+    </ul>
+  </main>
+  <aside class="aside">
+    <ul class="aside__nav">
+      <li class="aside__nav-item aside__nav-item--selected">Info</li>
+    </ul>
+      {% include reasoning/tools/plugins.html %}
+  </aside>
+</section>
+
+
+
+<section class="section" id="t-resources">
+  <main class="main">
+    <h5 class="main__title-border"><span class="main__title">Resources</span></h3>
+    <ul class="main__list">
+      <li class="main__list-item"><a href="https://gist.github.com/bobbygrace/9e961e8982f42eb91b80">Trello</a></li>
+      <li class="main__list-item"><a href="https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06">Medium</a></li>
+      <li class="main__list-item"><a href="http://cssguidelin.es/">CSS Guidelines</a></li>
+      <li class="main__list-item"><a href="http://primercss.io/guidelines/">GitHub Primer</a></li>
+      <li class="main__list-item"><a href="http://sass-guidelin.es">SASS Guidelines</a></li>
+    </ul>
+  </main>
+  <aside class="aside">
+    <ul class="aside__nav">
+      <li class="aside__nav-item aside__nav-item--selected">Info</li>
+    </ul>
+      {% include reasoning/tools/resources.html %}
+  </aside>
+</section>

@@ -1,0 +1,19 @@
+/* Do this */
+.list-item {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition-duration: 1.5s;
+}
+
+    .list-item__main-title {
+        padding: 0.5rem;
+    }
+
+/* Not this */
+.list-item {
+    margin: 16px 0 0 16px;
+    transition-duration: 1500ms;
+}
+.list-item__main-title {
+    padding: 8px;
+}

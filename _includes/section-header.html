@@ -1,0 +1,11 @@
+<section class="section-header {{ include.title }}">
+    {% if include.title == "html" %}
+    {% include icons/html.html %}
+    {% elsif include.title == "css" %}
+    {% include icons/css.html %}
+    {% else %}
+    {% include icons/tools.html %}
+    {% endif %}
+    <h2 class="section-header__title">{{ include.title }}</h2>
+    <div class="section-header__divider"></div>
+</section>

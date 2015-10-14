@@ -1,0 +1,39 @@
+<footer class="footer">
+    <p>Made halfway between the Moon and Earth by <a href="https://twitter.com/_fookay">@_fookay</a>.
+    </p>
+
+    <p>Submit any errors or suggestions by opening an issue in the
+        GitHub project.</p>
+
+    <p><small>&#169; {{ site.time | date: '%Y' }} Michael Fouquet<small>
+    </p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        $('aside ul li').click(function () {
+            if (!$(this).hasClass('aside__nav-item--selected')) {
+                var $asideEl = $(this).closest('aside');
+                var $sectionEl = $(this).closest('section');
+                $(this).toggleClass('aside__nav-item--selected').siblings().toggleClass('aside__nav-item--selected');
+                $asideEl.children('div').toggleClass('aside__info--selected');
+                $sectionEl.find('sup').toggle();
+            }
+        });
+
+        $('.table-of-contents-icon').click(function () {
+            $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
+        });
+
+        $('.table-of-contents-close').click(function () {
+            $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
+        });
+
+        $('.table-of-contents a').click(function () {
+            $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
+        });
+    })
+</script>

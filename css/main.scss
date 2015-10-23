@@ -143,18 +143,29 @@ a {
   }
 
   .table-of-contents__header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 
 
     .table-of-contents__header__title {
-      @include type-setting(3);
+      @include type-setting(2);
       margin-top: 0;
       margin-bottom: 0;
       font-family: $serif;
       font-style: italic;
       text-transform: uppercase;
       color: lighten($dark-blue, 20%);
+    }
+
+    .table-of-contents__header__divider {
+      height: 1px;
+      width: 100%;
+      margin-left: 1rem;
+      background-color: lighten($dark-blue, 20%);
     }
   }
 
@@ -356,7 +367,8 @@ a {
     color: $dark-blue;
     list-style-type: none;
     cursor: pointer;
-    transition: color 0.25s, background 0.25s, border 0.25s;
+    transition: color 0.25s, border 0.25s;
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 
     &:first-child {
       margin-right: 1rem;

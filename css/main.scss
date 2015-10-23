@@ -193,7 +193,7 @@ a {
 ----------------------------------------*/
 
 .header {
-  height: 50vh;
+  height: 100%;
   margin-bottom: 3rem;
   padding: 3rem;
   color: $red;
@@ -211,13 +211,44 @@ a {
 
   .header__small-title {
     @include type-setting(1);
+    margin-bottom: 1rem;
     font-family: $serif;
     font-style: italic;
+    font-weight: bold;
+
+    span {
+      border-top: 1px solid #D40015;
+      border-bottom: 1px solid #D40015;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  .header__divider {
+    margin: 1.25rem auto;
+    height: 3px;
+    width: 5%;
+    background-color: $dark-blue;
   }
 
   .header__title {
-    @include type-setting(4);
+    @include type-setting(6);
+    margin: 2rem auto;
     font-family: $sans_serif;
+    font-weight: bold;
+  }
+
+  .header__info-text {
+    @include type-setting(0);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: $dark-blue;
+  }
+
+  .header__version-number {
+    @include type-setting(-1);
+    color: $dark-gray;
+    font-style: italic;
   }
 
 

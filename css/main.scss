@@ -409,3 +409,7 @@ a {
     padding: 3rem;
   }
 }
+
+  .footer__copyright {
+    @include type-setting(-1);
+  }

@@ -1,35 +1,40 @@
-
-
-$med-blue: #D40015;
-$light-blue: #E8E8E8;
-
-$orange: #FF4411;
-
-$yellow: #fabe39;
-$green: #A7C520;
-
-$bp-mobile: 40em;
-
-
-
+/*----------------------------------------
+  #COLORS
+----------------------------------------*/
 
 $white: #fff;
 $black: #111;
 
 $dark-blue: #10222B;
+$med-blue: #D40015;
+
+$green: #A7C520;
 
 $dark-gray: #98A89E;
 $med-gray: #F5F5F5;
 $light-gray: #FBFBFB;
 
 $red: #D40015;
+$orange: #FF4411;
 
+
+
+/*----------------------------------------
+  #BREAKPOINTS
+----------------------------------------*/
+
+$bp-mobile: 40em;
+
+
+
+/*----------------------------------------
+  #FONTS
+----------------------------------------*/
 
 $serif: 'Lora', serif;
 $sans_serif: 'Roboto', sans-serif;
 
 $font-size: 1rem;
-
 $line-height: $font-size * 1.25;
 
 $type-scale: (
@@ -40,6 +45,7 @@ $type-scale: (
   3: 1.953rem,
   4: 2.441rem
 );
+
 
 @function type-scale($level) {
   @return map-get($type-scale, $level);
@@ -55,9 +61,11 @@ $line-heights: (
   4: $line-height * 2
 );
 
+
 @function line-height($level) {
   @return map-get($line-heights, $level);
 }
+
 
 @mixin type-setting($level: 0) {
   font-size: type-scale($level);

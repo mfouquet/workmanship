@@ -90,7 +90,7 @@ a {
   opacity: 1;
   box-shadow: 2px 0px 5px #888;
   transform: translate3d(-320px,0,0);
-  transition: transform 0.4;
+  transition: transform 0.4s;
   transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 
@@ -154,14 +154,16 @@ a {
       font-family: $serif;
       font-style: italic;
       text-transform: uppercase;
-      color: $dark-gray;
+      color: lighten($dark-blue, 20%);
     }
   }
 
   .table-of-contents__item {
-    @include type-setting(0);
+    @include type-setting(-1);
     margin-top: 0.5rem;
     font-family: $sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 
     a {
       color: white;

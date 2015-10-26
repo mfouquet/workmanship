@@ -102,10 +102,11 @@ a {
     position: fixed;
     top: 1rem;
     right: 1rem;
+    padding: 1rem;
     z-index: 1;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
-    font-family: 'Roboto';
+    font-family: $sans-serif;
     opacity: 0.2;
     cursor: pointer;
 
@@ -217,14 +218,53 @@ a {
 }
 
 .modal {
+  max-width: 600px;
+  padding: 3rem;
+  box-shadow: 0px 0px 20px #888;
   background-color: $dark-blue;
   color: $white;
 }
 
+  .modal__close {
+    text-align: right;
+    margin-top: -1.25rem;
+    margin-right: -1.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: $sans-serif;
+    opacity: 0.2;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   .modal__header {
     @include type-setting(3);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid lighten($dark-blue, 20%);
+    margin-bottom: 2rem;
     font-family: $serif;
     font-style: italic;
+    color: lighten($dark-blue, 20%);
+    text-align: center;
+  }
+
+  .modal__info {
+    @include type-setting(0);
+    font-family: $sans-serif;
+    text-align: justify;
+  }
+
+  .modal__excerpt {
+    @include type-setting(0);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid $white;
+    padding-left: 1rem;
+    font-style: italic;
+    text-align: justify;
   }
 
 

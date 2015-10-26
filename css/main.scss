@@ -178,7 +178,7 @@ a {
     text-transform: uppercase;
 
     a {
-      color: white;
+      color: $white;
       border-bottom: 0;
 
       &:hover {
@@ -347,7 +347,6 @@ a {
 
   .header__info-modal {
     @include type-setting(-1);
-    //color: $dark-gray;
     font-style: italic;
   }
 
@@ -403,7 +402,7 @@ a {
     height: 1px;
     width: 100%;
     margin-left: 1rem;
-    background-color: #e8e8e8;
+    background-color: $med-gray;
   }
 
 

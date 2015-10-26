@@ -2,7 +2,7 @@
     <p>Made approximately halfway between the Moon and the Earth by <a href="https://twitter.com/_fookay">@_fookay</a>.
     </p>
 
-    <p>Errors and suggestions go in the 
+    <p>Errors and suggestions go in the
         <a href="https://github.com/mfouquet/workmanship">GitHub project</a>.</p>
 
     <p class="footer__copyright">&#169; {{ site.time | date: '%Y' }} Michael Fouquet</p>
@@ -33,6 +33,16 @@
 
         $('.table-of-contents a').click(function () {
             $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
+        });
+
+        $('.header__info-modal').click(function () {
+            $('.modal__background').toggleClass('modal__background--shown');
+            $('.modal__wrapper').toggleClass('modal__wrapper--shown');
+        });
+
+        $('.modal__close').click(function () {
+            $('.modal__background').toggleClass('modal__background--shown');
+            $('.modal__wrapper').toggleClass('modal__wrapper--shown');
         });
     })
 </script>

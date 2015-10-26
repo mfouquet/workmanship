@@ -201,10 +201,16 @@ a {
   height: 100%;
   overflow: hidden;
   z-index: 101;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
+
+  .modal__wrapper--shown {
+    display: flex;
+    opacity: 1;
+  }
 
 .modal__background {
   position: fixed;
@@ -214,8 +220,15 @@ a {
   height: 100%;
   overflow: hidden;
   z-index: 100;
+  display: none;
+  opacity: 0;
   background-color: rgba($white, .95);
 }
+
+  .modal__background--shown {
+    display: block;
+    opacity: 1;
+  }
 
 .modal {
   max-width: 600px;
@@ -329,6 +342,12 @@ a {
   .header__version-number {
     @include type-setting(-1);
     color: $dark-gray;
+    font-style: italic;
+  }
+
+  .header__info-modal {
+    @include type-setting(-1);
+    //color: $dark-gray;
     font-style: italic;
   }
 

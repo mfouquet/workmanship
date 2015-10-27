@@ -2,20 +2,20 @@
   #COLORS
 ----------------------------------------*/
 
-$white: #fff;
-$black: #111;
+$white:       #FFFFFF;
+$black:       #111111;
 
-$dark-blue: #10222B;
-$med-blue: #D40015;
+$dark-blue:   #10222B;
+$med-blue:    #2C5D75;
 
-$green: #A7C520;
+$green:       #A7C520;
 
-$dark-gray: #98A89E;
-$med-gray: #E8E8E8;
-$light-gray: #FBFBFB;
+$dark-gray:   #98A89E;
+$med-gray:    #E8E8E8;
+$light-gray:  #FBFBFB;
 
-$red: #D40015;
-$orange: #FF4411;
+$red:         #D40015;
+$orange:      #FF4411;
 
 
 
@@ -31,21 +31,21 @@ $bp-mobile: 40em;
   #FONTS
 ----------------------------------------*/
 
-$serif: 'Lora', serif;
-$sans_serif: 'Roboto', sans-serif;
+$serif:       'Lora', serif;
+$sans_serif:  'Roboto', sans-serif;
 
-$font-size: 1rem;
+$font-size:   1rem;
 $line-height: $font-size * 1.25;
 
 $type-scale: (
   -1: 0.8rem,
-  0: 1rem,
-  1: 1.25rem,
-  2: 1.563rem,
-  3: 1.953rem,
-  4: 2.441rem,
-  5: 3.052rem,
-  6: 3.815rem
+  0:  1rem,
+  1:  1.25rem,
+  2:  1.563rem,
+  3:  1.953rem,
+  4:  2.441rem,
+  5:  3.052rem,
+  6:  3.815rem
 );
 
 
@@ -56,13 +56,13 @@ $type-scale: (
 
 $line-heights: (
   -1: $line-height,
-  0: $line-height,
-  1: $line-height * 2,
-  2: $line-height * 2,
-  3: $line-height * 2,
-  4: $line-height * 2,
-  5: $line-height * 2,
-  6: $line-height * 3
+  0:  $line-height,
+  1:  $line-height * 2,
+  2:  $line-height * 2,
+  3:  $line-height * 2,
+  4:  $line-height * 2,
+  5:  $line-height * 2,
+  6:  $line-height * 3
 );
 
 
@@ -72,6 +72,6 @@ $line-heights: (
 
 
 @mixin type-setting($level: 0) {
-  font-size: type-scale($level);
-  line-height: line-height($level);
+  font-size:    type-scale($level);
+  line-height:  line-height($level);
 }

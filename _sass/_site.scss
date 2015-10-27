@@ -131,7 +131,7 @@ a {
       margin-bottom: 0;
       font-family: $serif;
       font-style: italic;
-      color: lighten($dark-blue, 20%);
+      color: $med-blue;
       text-transform: uppercase;
     }
 
@@ -139,7 +139,7 @@ a {
       height: 1px;
       width: 100%;
       margin-left: 1rem;
-      background-color: lighten($dark-blue, 20%);
+      background-color: $med-blue;
     }
   }
 
@@ -219,11 +219,11 @@ a {
   .modal__header {
     @include type-setting(3);
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid lighten($dark-blue, 20%);
+    border-bottom: 1px solid $med-blue;
     margin-bottom: 2rem;
     font-family: $serif;
     font-style: italic;
-    color: lighten($dark-blue, 20%);
+    color: $med-blue;
     text-align: center;
   }
 

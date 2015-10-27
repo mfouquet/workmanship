@@ -24,7 +24,7 @@ body {
 sup {
   display: none;
   font-weight: 700;
-  color: $orange;
+  color: $red;
 }
 
 
@@ -455,7 +455,14 @@ a {
 
   .aside__info--selected { display: block; }
 
-  .aside__info-list-item { padding-bottom: 0.5rem; }
+  .aside__info-list-item {
+    padding-bottom: 0.5rem;
+    color: $red;
+
+    span {
+      color: $dark-blue;
+    }
+  }
 
 
 

@@ -1,13 +1,13 @@
 /* Do this */
 .table-item {
-    padding: 0.25rem;
-    margin: 0;
-    font-size: 1.25rem;
+  padding: 0.25rem;
+  margin: 0;
+  font-size: 1.25rem;
 }
 
 /* Not this */
 .tableItem {
-    font-size: 1.25rem;
-    padding: .25rem;
-    margin: 0rem;
+  font-size: 1.25rem;
+  padding: .25rem;
+  margin: 0rem;
 }

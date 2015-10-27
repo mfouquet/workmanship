@@ -1,12 +1,12 @@
 .list-item {
-    @include font-size(1);
-    padding: 1rem;
+  @include font-size(1);
+  padding: 1rem;
 
-    &:hover {
-        background-color: $light-gray;
-    }
+  &:hover {
+    background-color: $light-gray;
+  }
 
-    @include respond($br-desktop) {
-        padding: 2rem;
-    }
+  @include respond($br-desktop) {
+    padding: 2rem;
+  }
 }

@@ -153,6 +153,7 @@ a {
     a {
       color: $white;
       border-bottom: 0;
+      transition: color 0.25s cubic-bezier(0.7,0,0.3,1);
 
       &:hover { color: $orange; }
     }

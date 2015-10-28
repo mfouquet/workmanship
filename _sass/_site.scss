@@ -24,7 +24,7 @@ body {
 sup {
   display: none;
   font-weight: 700;
-  color: $orange;
+  color: $red;
 }
 
 
@@ -131,7 +131,7 @@ a {
       margin-bottom: 0;
       font-family: $serif;
       font-style: italic;
-      color: lighten($dark-blue, 20%);
+      color: $med-blue;
       text-transform: uppercase;
     }
 
@@ -139,7 +139,7 @@ a {
       height: 1px;
       width: 100%;
       margin-left: 1rem;
-      background-color: lighten($dark-blue, 20%);
+      background-color: $med-blue;
     }
   }
 
@@ -153,6 +153,7 @@ a {
     a {
       color: $white;
       border-bottom: 0;
+      transition: color 0.25s cubic-bezier(0.7,0,0.3,1);
 
       &:hover { color: $orange; }
     }
@@ -219,11 +220,11 @@ a {
   .modal__header {
     @include type-setting(3);
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid lighten($dark-blue, 20%);
+    border-bottom: 1px solid $med-blue;
     margin-bottom: 2rem;
     font-family: $serif;
     font-style: italic;
-    color: lighten($dark-blue, 20%);
+    color: $med-blue;
     text-align: center;
   }
 
@@ -251,7 +252,7 @@ a {
 
 .header {
   height: 100%;
-  padding: 3rem;
+  padding: 3rem 0;
   margin-bottom: 3rem;
   color: $red;
   text-align: center;
@@ -455,7 +456,14 @@ a {
 
   .aside__info--selected { display: block; }
 
-  .aside__info-list-item { padding-bottom: 0.5rem; }
+  .aside__info-list-item {
+    padding-bottom: 0.5rem;
+    color: $red;
+
+    span {
+      color: $dark-blue;
+    }
+  }
 
 
 

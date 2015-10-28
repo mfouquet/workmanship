@@ -2,13 +2,13 @@
 h4,
 h5,
 h6 {
-    color: rgba(100, 100, 100, 0);
-    margin-bottom: 0.25rem;
+  color: rgba(100, 100, 100, 0);
+  margin-bottom: 0.25rem;
 }
 
 /* Not this */
 h4, h5, h6
 {
-    color:rgba(100,100,100,0);
-    margin-bottom:0.25rem
+  color:rgba(100,100,100,0);
+  margin-bottom:0.25rem
 }

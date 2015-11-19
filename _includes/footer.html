@@ -24,25 +24,14 @@
         }
       });
 
-      $('.table-of-contents-icon').click(function () {
+      $('.table-of-contents-icon, .table-of-contents-close, .table-of-contents a').click(function () {
         $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
       });
 
-      $('.table-of-contents-close').click(function () {
-        $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
-      });
-
-      $('.table-of-contents a').click(function () {
-        $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
-      });
-
-      $('.header__info-modal').click(function () {
+      $('.header__info-modal, .modal__close').click(function () {
         $('.modal__wrapper').toggleClass('modal__wrapper--shown');
       });
 
-      $('.modal__close').click(function () {
-        $('.modal__wrapper').toggleClass('modal__wrapper--shown');
-      });
   })
 
 

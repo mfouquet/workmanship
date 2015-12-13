@@ -251,62 +251,65 @@ a {
 ----------------------------------------*/
 
 .header {
-  height: 100%;
-  padding: 3rem 0;
-  margin-bottom: 3rem;
-  color: $red;
-  text-align: center;
-  background: $white top center/cover no-repeat url(../img/background.jpg);
-
-  @media only screen and (min-width: $bp-mobile) { padding: 5rem; }
+  overflow: hidden;
 }
 
-  .header__small-title {
-    @include type-setting(1);
-    margin-bottom: 1rem;
-    font-family: $serif;
-    font-style: italic;
-    font-weight: bold;
+  .header__container {
+    height: 100%;
+    padding: 3rem 0;
+    color: $red;
+    text-align: center;
+    background: $white top center/cover no-repeat url(../img/background.jpg);
 
-    span {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-      border-top: 1px solid $red;
-      border-bottom: 1px solid $red;
+    @media only screen and (min-width: $bp-mobile) { padding: 5rem; }
+  }
+
+    .header__text__small-title {
+      @include type-setting(1);
+      margin-bottom: 1rem;
+      font-family: $serif;
+      font-style: italic;
+      font-weight: bold;
+
+      span {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-top: 1px solid $red;
+        border-bottom: 1px solid $red;
+      }
     }
-  }
 
-  .header__divider {
-    width: 5%;
-    height: 3px;
-    margin: 1.25rem auto;
-    background-color: $dark-blue;
-  }
+    .header__text__divider {
+      width: 5%;
+      height: 3px;
+      margin: 1.25rem auto;
+      background-color: $dark-blue;
+    }
 
-  .header__title {
-    @include type-setting(6);
-    margin: 2rem auto;
-    font-family: $sans_serif;
-    font-weight: bold;
-  }
+    .header__text__title {
+      @include type-setting(6);
+      margin: 2rem auto;
+      font-family: $sans_serif;
+      font-weight: bold;
+    }
 
-  .header__info-text {
-    @include type-setting(0);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    color: $dark-blue;
-  }
+    .header__text__info-text {
+      @include type-setting(0);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: $dark-blue;
+    }
 
-  .header__version-number {
-    @include type-setting(-1);
-    font-style: italic;
-    color: $dark-gray;
-  }
+    .header__text__version-number {
+      @include type-setting(-1);
+      font-style: italic;
+      color: $dark-gray;
+    }
 
-  .header__info-modal {
-    @include type-setting(-1);
-    font-style: italic;
-  }
+    .header__text__info-modal {
+      @include type-setting(-1);
+      font-style: italic;
+    }
 
 
 
@@ -322,6 +325,12 @@ a {
   background-color: $white;
 
   @media only screen and (min-width: $bp-mobile) { padding: 1rem 3rem 0 3rem; }
+
+  &.html {
+    padding-top: 3rem;
+
+    @media only screen and (min-width: $bp-mobile) { padding-top: 5rem; }
+  }
 
   &.html svg {
     width: 3rem;

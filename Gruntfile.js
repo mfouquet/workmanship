@@ -44,13 +44,33 @@ module.exports = function(grunt) {
         config: '_config.yml'
       }
     },
+
+    buildcontrol: {
+      options: {
+        dir: '_site',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:mfouquet/workmanship.git',
+          branch: 'gh-pages'
+        }
+      }
+    }
   });
 
   // Load dependencies
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-build-control');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-sass');
 
+  // Generate the CSS, do Jekyll stuff, add vendor prefixes
   grunt.registerTask('default', ['sass', 'jekyll', 'postcss']);
+
+  // Publish to GitHub under the gh-pages branch
+  grunt.registerTask('publish', ['jekyll', 'postcss:dist', 'buildcontrol:pages']);
 };

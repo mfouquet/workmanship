@@ -1,11 +1,11 @@
 <footer class="footer">
-    <p>Made approximately halfway between the 🌖 and the 🌍 by <a href="https://twitter.com/_fookay">@_fookay</a>.
-    </p>
+  <p>Made approximately halfway between the 🌖 and the 🌍 by <a href="https://twitter.com/_fookay">@_fookay</a>.
+  </p>
 
-    <p>Errors and suggestions go in the
-        <a href="https://github.com/mfouquet/workmanship">GitHub project</a>.</p>
+  <p>Errors and suggestions go in the
+    <a href="https://github.com/mfouquet/workmanship">GitHub project</a>.</p>
 
-    <p class="footer__copyright">&#169; {{ site.time | date: '%Y' }} Michael Fouquet</p>
+  <p class="footer__copyright">&#169; {{ site.time | date: '%Y' }} Michael Fouquet</p>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -14,24 +14,49 @@
   // - Page -
   $(document).ready(function(){
 
-      $('aside ul li').click(function () {
-        if (!$(this).hasClass('aside__nav-item--selected')) {
-          var $asideEl = $(this).closest('aside');
-          var $sectionEl = $(this).closest('section');
-          $(this).toggleClass('aside__nav-item--selected').siblings().toggleClass('aside__nav-item--selected');
-          $asideEl.children('div').toggleClass('aside__info--selected');
-          $sectionEl.find('sup').toggle();
-        }
-      });
+    $(window).scroll(function() {
+      // Header Scroll Animation modified from:
+      // http://thenewcode.com/808/Scroll-to-Focus-Effect-For-Hero-Images
+      var headerImage =       $(".header__container")[0],
+          headerText =        $(".header__text")[0],
+          headerImageOffset = headerImage.getBoundingClientRect(),
+          imageTop =          headerImageOffset.top,
+          imageBottom =       headerImageOffset.bottom,
+          imageHeight =       headerImage.offsetHeight,
+          windowHeight =      document.documentElement.clientHeight,
+          topWindow =         Math.abs((windowHeight - imageHeight)/5);
 
-      $('.table-of-contents-icon, .table-of-contents-close, .table-of-contents a').click(function () {
-        $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
-      });
+      if (imageTop < topWindow && imageBottom > 0 ) {
+        var imageScaleAmount =  1 + Math.abs(imageTop / 2000),
+        textScaleAmount =       1 - Math.abs(imageTop / 1000),
+        textOpacityAmount =     1 - Math.abs(imageTop / 500);
 
-      $('.header__info-modal, .modal__close').click(function () {
-        $('.modal__wrapper').toggleClass('modal__wrapper--shown');
-      });
+        headerImage.style.webkitTransform = "scale(" + imageScaleAmount + ")";
+        headerImage.style.transform = "scale(" + imageScaleAmount + ")";
+        headerText.style.webkitTransform = "scale(" + textScaleAmount + ")";
+        headerText.style.transform = "scale(" + textScaleAmount + ")";
+        headerText.style.opacity = textOpacityAmount;
+      }
+    });
 
+
+    $('aside ul li').click(function () {
+      if (!$(this).hasClass('aside__nav-item--selected')) {
+        var $asideEl = $(this).closest('aside');
+        var $sectionEl = $(this).closest('section');
+        $(this).toggleClass('aside__nav-item--selected').siblings().toggleClass('aside__nav-item--selected');
+        $asideEl.children('div').toggleClass('aside__info--selected');
+        $sectionEl.find('sup').toggle();
+      }
+    });
+
+    $('.table-of-contents-icon, .table-of-contents-close, .table-of-contents a').click(function () {
+      $('.table-of-contents-container').toggleClass('table-of-contents-container--shown');
+    });
+
+    $('.header__info-modal, .modal__close').click(function () {
+      $('.modal__wrapper').toggleClass('modal__wrapper--shown');
+    });
   })
 
 
